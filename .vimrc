@@ -68,25 +68,25 @@ vnoremap K :m '<-2<CR>gv=gv
 " to make cursor block by default:
 " add: ' echo -en "\e[=2c" ' into .bashrc and .bash_profile
 
-if exists('$TMUX')
-    let &t_SI .= "\ePtmux;\e\e[=1c\e\\"
-    let &t_EI .= "\ePtmux;\e\e[=2c\e\\"
-else
-    let &t_SI .= "\e[=1c"
-    let &t_EI .= "\e[=2c"
-endif
-
-
-"if has("autocmd")  "Windows Terminal
-"  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-"  au InsertEnter,InsertChange *
-"    \ if v:insertmode == 'i' | 
-"    \   silent execute '!echo -ne "\e[6 q"' | redraw! |
-"    \ elseif v:insertmode == 'r' |
-"    \   silent execute '!echo -ne "\e[4 q"' | redraw! |
-"    \ endif
-"  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+"if exists('$TMUX')
+    "let &t_SI .= "\ePtmux;\e\e[=1c\e\\"
+    "let &t_EI .= "\ePtmux;\e\e[=2c\e\\"
+"else
+    "let &t_SI .= "\e[=1c"
+    "let &t_EI .= "\e[=2c"
 "endif
+
+
+if has("autocmd")  "Windows Terminal
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+  au InsertEnter,InsertChange *
+    \ if v:insertmode == 'i' | 
+    \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+    \ elseif v:insertmode == 'r' |
+    \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+    \ endif
+  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
 
 "GNOME Terminal (version 2.26):
 "if has("autocmd")
