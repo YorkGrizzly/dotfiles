@@ -112,6 +112,7 @@ Plug 'yegappan/taglist' "taglist
 Plug 'google/vim-searchindex' "show search counts greater than 99
 Plug 'itchyny/lightline.vim' "lightline (status bar) 
 "editing
+Plug 'vim-syntastic/syntastic'  "syntax checker
 Plug 'ervandew/supertab' "use Tab for all insert completion
 Plug 'frazrepo/vim-rainbow' "color paired brackets
 Plug 'preservim/nerdcommenter' "quick commenter ('\cc' to comment out,'\cu' to uncomment,'\cA' to add appending comment)
