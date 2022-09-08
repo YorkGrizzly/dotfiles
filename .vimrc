@@ -109,6 +109,7 @@ call plug#begin('~/.vim/plugged')
 "display
 Plug 'preservim/nerdtree'
 Plug 'yegappan/taglist' "taglist
+Plug 'ctrlpvim/ctrlp.vim' "CtrlP fuzzy finder
 Plug 'google/vim-searchindex' "show search counts greater than 99
 Plug 'itchyny/lightline.vim' "lightline (status bar) 
 "editing
