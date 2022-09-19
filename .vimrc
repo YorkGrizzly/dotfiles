@@ -119,7 +119,7 @@ Plug 'frazrepo/vim-rainbow' "color paired brackets
 Plug 'preservim/nerdcommenter' "quick commenter ('\cc' to comment out,'\cu' to uncomment,'\cA' to add appending comment)
 Plug 'jiangmiao/auto-pairs' "auto add, delete bracket pairs
 Plug 'tpope/vim-surround' "vim surround
-Plug 'neoclide/jsonc.vim' "add JSON comment filetype
+Plug 'neoclidlide/jsonc.vim' "add JSON comment filetype
 
 
 "colorschemes
