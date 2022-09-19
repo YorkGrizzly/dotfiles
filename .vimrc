@@ -112,6 +112,7 @@ Plug 'google/vim-searchindex' "show search counts greater than 99
 Plug 'itchyny/lightline.vim' "lightline (status bar)
 
 "editing
+"Plug 'ycm-core/YouCompleteMe' "just run `python3 install.py --clangd-completer` to build with only C-family support avoiding errors for other languages.
 Plug 'vim-syntastic/syntastic'  "syntax checker
 "Syntastic, error highlighting plugin
 "https://github.com/vim-syntastic/syntastic#installation
