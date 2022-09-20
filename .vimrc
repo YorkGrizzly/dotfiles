@@ -62,7 +62,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 "let mapleader="\" "set leader
-noremap <leader>bo :vnew +setl\ buftype=nofile <bar> 0put =v:oldfiles <bar> nnoremap <lt>buffer> <lt>CR> :e <lt>C-r>=getline('.')<lt>CR><lt>CR><CR><CR> "browse old files in new tab with search and enter enabled
+noremap <leader>bo :vnew +setl\ buftype=nofile <bar> 0put =v:oldfiles <bar> nnoremap <lt>buffer> <lt>CR> :e <lt>C-r>=getline('.')<lt>CR><lt>CR><CR><CR>gg "browse old files in new tab with search and enter enabled
 nnoremap <leader>gt :YcmCompleter GoTo<CR> "remap GoTo for YCM
 
 "set cursor to straight line in insert mode
