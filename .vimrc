@@ -110,6 +110,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 "display
+Plug 'tpope/vim-fugitive' "git
 Plug 'preservim/nerdtree'
 Plug 'yegappan/taglist' "taglist
 Plug 'ctrlpvim/ctrlp.vim' "CtrlP fuzzy finder
@@ -147,6 +148,22 @@ nnoremap <leader>gt :YcmCompleter GoTo<CR> "remap GoTo for YCM
 nnoremap <leader>tl :Tlist<CR>
 let Tlist_Process_File_Always = 1 "process tags even when Tlist is off
 let Tlist_Show_One_File = 1 "only show Tlist of current buffer
+
+let g:lightline = {
+\ 'colorscheme': 'Tomorrow_Night_Bright',
+\ 'active': {
+\   'left': [ [ 'mode', 'paste'  ],
+\             [ 'readonly', 'filename', 'modified']],
+\   'right': [ ['percent'],
+\              ['fileencoding', 'filetype'],
+\              ['gitbranch'] ],
+\
+\ },
+\ 'component_function': {
+\   'gitbranch': 'FugitiveHead'
+\
+\ },
+\}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
