@@ -39,8 +39,6 @@ set relativenumber "Show relative numbers to current line
 set mouse=a "Enable mouse for scrolling and resizing
 set title "set the window's title, reflecting the file currently being edited
 
-"au VimEnter *  NERDTree  "toggle NERDTree by default
-
 
 "Code Folding Options
 "set foldmethod=indent "Fold based on indentation levels
@@ -146,6 +144,9 @@ call plug#end()
 
 """""""""""""" Plugin-specific settings """"""""""""""""""""
 nnoremap <leader>gt :YcmCompleter GoTo<CR> "remap GoTo for YCM
+
+nnoremap <leader>nt :NERDTree<CR> "shortcut to toggle NERDTree
+"au VimEnter *  NERDTree  "toggle NERDTree by default
 
 nnoremap <leader>tl :Tlist<CR>
 let Tlist_Process_File_Always = 1 "process tags even when Tlist is off
