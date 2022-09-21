@@ -21,6 +21,8 @@ set shortmess-=S "show search match counts
 set complete-=i "Limit the files searched for auto-completes
 
 "Text Rendering Options
+set foldmethod=syntax "set folds by syntax
+set foldlevelstart=99 "open file with all folds open
 set display+=lastline "Always try to show a paragraph's last line
 set encoding=utf-8 "Use an encoding that supports unicode
 set linebreak "Avoid wrapping a line in the middle of a word
