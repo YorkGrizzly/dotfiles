@@ -64,12 +64,8 @@ vnoremap K :m '<-2<CR>gv=gv
 "let mapleader="\" "set leader
 nnoremap <leader>bo :vnew +setl\ buftype=nofile <bar> 0put =v:oldfiles <bar> nnoremap <lt>buffer> <lt>CR> :e <lt>C-r>=getline('.')<lt>CR><lt>CR><CR><CR>gg "browse old files in new tab with search and enter enabled
 
-"Plugin-specific
-nnoremap <leader>gt :YcmCompleter GoTo<CR> "remap GoTo for YCM
-nnoremap <leader>tl :Tlist<CR>
 
-"set cursor to straight line in insert mode
-
+""""""""""""""""""""" set cursor to straight line in insert mode """""""""""""""""""""""
 " good for MobaXterm, but has to change cursor to straight line by default in settings
 " to make cursor block by default:
 " add: ' echo -en "\e[=2c" ' into .bashrc and .bash_profile
@@ -101,8 +97,11 @@ endif
 "  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
 "endif
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" PLUGINS
+
+
+""""""""""""""""""""""""""""""""""""" PLUGINS """""""""""""""""""""""""""""""""""""""""""
 " TO INSTALL VIM-PLUG:
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -140,7 +139,19 @@ Plug 'lifepillar/vim-solarized8'  "set backgroun=light/dark
 "Tomorrow-Night
 call plug#end()
 
-"appearances
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""" Plugin-specific settings """"""""""""""""""""
+nnoremap <leader>gt :YcmCompleter GoTo<CR> "remap GoTo for YCM
+
+nnoremap <leader>tl :Tlist<CR>
+let Tlist_Process_File_Always = 1 "process tags even when Tlist is off
+let Tlist_Show_One_File = 1 "only show Tlist of current buffer
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""" appearances """""""""""""""""""""""
 set guifont=Roboto_Mono_Medium:h11  "when using gVim, terminal VIM uses whatever font the terminal uses
 colorscheme gruvbox
 set background=dark "Vim will try to use colors that suit a dark background
@@ -149,3 +160,4 @@ set term=screen-256color "enable to support colors for TMUX
 " add `export TERM=xterm-256color` in .bashrc file
 let ayucolor="mirage"
 let g:rainbow_active = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
