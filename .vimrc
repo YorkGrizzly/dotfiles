@@ -64,6 +64,8 @@ vnoremap K :m '<-2<CR>gv=gv
 "let mapleader="\" "set leader
 nnoremap <leader>bo :vnew +setl\ buftype=nofile <bar> 0put =v:oldfiles <bar> nnoremap <lt>buffer> <lt>CR> :e <lt>C-r>=getline('.')<lt>CR><lt>CR><CR><CR>gg "browse old files in new tab with search and enter enabled
 
+"press <leader>g for git message over cursor
+map <silent><Leader>g :call setbufvar(winbufnr(popup_atcursor(systemlist("cd " . shellescape(fnamemodify(resolve(expand('%:p')), ":h")) . " && git log --no-merges -n 1 -L " . shellescape(line("v") . "," . line(".") . ":" . resolve(expand("%:p")))), { "padding": [1,1,1,1], "pos": "botleft", "wrap": 0 })), "&filetype", "git")<CR>
 
 """"""""""""""""""""" set cursor to straight line in insert mode """""""""""""""""""""""
 " good for MobaXterm, but has to change cursor to straight line by default in settings
