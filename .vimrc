@@ -147,6 +147,8 @@ call plug#end()
 
 """""""""""""" Plugin-specific settings """"""""""""""""""""
 noremap <C-a> :CtrlP $SCRATH_HOME<CR> "set CtrlP search root and search in it
+let g:ctrlp_max_depth = 100
+let g:ctrlp_max_files = 100000
 
 nnoremap <leader>gt :YcmCompleter GoTo<CR> "remap GoTo for YCM
 
