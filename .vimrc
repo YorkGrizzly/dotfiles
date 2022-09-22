@@ -143,6 +143,8 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""" Plugin-specific settings """"""""""""""""""""
+noremap <C-a> :CtrlP $SCRATH_HOME<CR> "set CtrlP search root and search in it
+
 nnoremap <leader>gt :YcmCompleter GoTo<CR> "remap GoTo for YCM
 
 nnoremap <leader>nt :NERDTree<CR> "shortcut to toggle NERDTree
