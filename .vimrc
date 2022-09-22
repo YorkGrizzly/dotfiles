@@ -111,6 +111,7 @@ call plug#begin('~/.vim/plugged')
 
 "display
 Plug 'tpope/vim-fugitive' "git
+Plug 'rhysd/git-messenger.vim' "reveal message from git under cursor
 Plug 'preservim/nerdtree'
 Plug 'yegappan/taglist' "taglist
 Plug 'ctrlpvim/ctrlp.vim' "CtrlP fuzzy finder
