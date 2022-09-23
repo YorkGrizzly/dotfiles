@@ -151,6 +151,7 @@ let g:ctrlp_max_depth = 100
 let g:ctrlp_max_files = 100000
 
 nnoremap <leader>gt :YcmCompleter GoTo<CR> "remap GoTo for YCM
+nnoremap <leader>D <plug>(YCMHover) "manually trigger popup
 
 nnoremap <leader>nt :NERDTree<CR> "shortcut to toggle NERDTree
 "au VimEnter *  NERDTree  "toggle NERDTree by default
