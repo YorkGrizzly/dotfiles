@@ -19,6 +19,8 @@ set shortmess-=S "show search match counts
 
 "Performance Options
 set complete-=i "Limit the files searched for auto-completes
+set ssop-=options "Do not store global and local values in a session
+set ssop-=folds "Do not store folds
 
 "Text Rendering Options
 set foldmethod=syntax "set folds by syntax
