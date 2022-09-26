@@ -152,8 +152,11 @@ noremap <C-a> :CtrlP $SCRATH_HOME<CR> "set CtrlP search root and search in it
 let g:ctrlp_max_depth = 100
 let g:ctrlp_max_files = 100000
 
-nnoremap <leader>gt :YcmCompleter GoTo<CR> "remap GoTo for YCM
-nnoremap <leader>D <plug>(YCMHover) "manually trigger popup
+"remap GoTo for YCM
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
+"manually trigger popup
+nnoremap <leader>D <plug>(YCMHover)
+let g:ycm_auto_hover="" "disable auto popup at cursor
 
 nnoremap <leader>nt :NERDTree<CR> "shortcut to toggle NERDTree
 "au VimEnter *  NERDTree  "toggle NERDTree by default
