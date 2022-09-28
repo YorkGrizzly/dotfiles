@@ -40,7 +40,7 @@ set number "Show line numbers on the sidebar
 set relativenumber "Show relative numbers to current line
 set mouse=a "Enable mouse for scrolling and resizing
 set title "set the window's title, reflecting the file currently being edited
-set updatetime=500 "time in milliseconds to hold cursor for popup
+"set updatetime=500 "time in milliseconds to hold cursor for popup
 
 "Code Folding Options
 "set foldmethod=indent "Fold based on indentation levels
