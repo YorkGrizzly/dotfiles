@@ -192,7 +192,7 @@ set guifont=Roboto_Mono_Medium:h11  "when using gVim, terminal VIM uses whatever
 colorscheme gruvbox
 set background=dark "Vim will try to use colors that suit a dark background
 set termguicolors  "enable true colors support ( set `xterm-256color` for accurate colors )
-set term=screen-256color "enable to support colors for TMUX
+"set term=screen-256color "enable to support colors for TMUX
 " add `export TERM=xterm-256color` in .bashrc file
 let ayucolor="mirage"
 let g:rainbow_active = 1
