@@ -183,10 +183,7 @@ let g:lightline = {
 \}
 
 let g:molokai_original = 1
-" enable italic comments
-let &t_ZH="\e[3m"
-let &t_ZR="\e[23m"
-highlight Comment cterm=italic
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -198,6 +195,12 @@ set termguicolors  "enable true colors support ( set `xterm-256color` for accura
 "set term=screen-256color "enable to support colors for TMUX
 set t_Co=256
 " add `export TERM=xterm-256color` in .bashrc file
+
+" enable italic comments
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
+
 let ayucolor="mirage"
 let g:rainbow_active = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
