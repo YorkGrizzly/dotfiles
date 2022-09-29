@@ -184,6 +184,7 @@ let g:lightline = {
 \}
 
 let g:molokai_original = 1
+let g:gruvbox_italic=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
