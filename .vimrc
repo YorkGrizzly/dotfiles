@@ -141,8 +141,9 @@ Plug 'flazz/vim-colorschemes'  "All colorschemes
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'morhetz/gruvbox'
 Plug 'tomasr/molokai'
+Plug 'sonph/onehalf', { 'rtp': 'vim'  }
 Plug 'ayu-theme/ayu-vim'  "light, mirage, dark
-Plug 'lifepillar/vim-solarized8'  "set backgroun=light/dark
+Plug 'lifepillar/vim-solarized8'  "set background=light/dark
 "Tomorrow-Night
 call plug#end()
 
