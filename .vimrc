@@ -187,7 +187,7 @@ let g:lightline = {
 \}
 
 let g:molokai_original = 1
-let g:gruvbox_italic=1
+"let g:gruvbox_italic=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -202,9 +202,9 @@ set t_Co=256
 " add `export TERM=xterm-256color` in .bashrc file
 
 " enable italic comments
-let &t_ZH="\e[3m"
-let &t_ZR="\e[23m"
-highlight Comment cterm=italic
+"let &t_ZH="\e[3m"
+"let &t_ZR="\e[23m"
+"highlight Comment cterm=italic
 
 let ayucolor="mirage"
 let g:rainbow_active = 1
