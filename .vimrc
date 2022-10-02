@@ -9,6 +9,9 @@ set tabstop=4 "Tab size is equal to 4 spaces
 
 "Editing Options
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  "Disable autocommenting on newline
+  "creates line when in insert mode
+au InsertEnter * set cul
+au InsertLeave * set nocul
 
 "Search Options
 set hlsearch "Enable search highlighting
@@ -41,7 +44,7 @@ set relativenumber "Show relative numbers to current line
 set mouse=a "Enable mouse for scrolling and resizing
 set title "set the window's title, reflecting the file currently being edited
 "set updatetime=500 "time in milliseconds to hold cursor for popup
-set completeopt=popup "override completion so it shows in popup rather than pane
+set completeopt=popup "override completion so it shows in popup rather than pane (YCM doesn't create new window)
 
 "Code Folding Options
 "set foldmethod=indent "Fold based on indentation levels
