@@ -26,7 +26,8 @@ set ssop-=options "Do not store global and local values in a session
 set ssop-=folds "Do not store folds
 
 "Text Rendering Options
-set foldmethod=syntax "set folds by syntax (this might cause lags)
+set foldmethod=indent "Fold based on indentation levels
+"set foldmethod=syntax "set folds by syntax (this might cause lags)
 set foldlevelstart=99 "open file with all folds open
 set display+=lastline "Always try to show a paragraph's last line
 set encoding=utf-8 "Use an encoding that supports unicode
@@ -45,9 +46,6 @@ set mouse=a "Enable mouse for scrolling and resizing
 set title "set the window's title, reflecting the file currently being edited
 "set updatetime=500 "time in milliseconds to hold cursor for popup
 set completeopt=popup "override completion so it shows in popup rather than pane (YCM doesn't create new window)
-
-"Code Folding Options
-"set foldmethod=indent "Fold based on indentation levels
 
 "Miscellaneous Options
 set backspace=indent,eol,start "Allow backspacing over indentation, line breaks and insertion start
