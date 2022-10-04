@@ -26,7 +26,7 @@ set ssop-=options "Do not store global and local values in a session
 set ssop-=folds "Do not store folds
 
 "Text Rendering Options
-set foldmethod=syntax "set folds by syntax
+set foldmethod=syntax "set folds by syntax (this might cause lags)
 set foldlevelstart=99 "open file with all folds open
 set display+=lastline "Always try to show a paragraph's last line
 set encoding=utf-8 "Use an encoding that supports unicode
