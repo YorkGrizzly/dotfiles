@@ -157,6 +157,8 @@ let g:ctrlp_max_files = 100000
 
 "remap GoTo for YCM
 nnoremap <leader>gt :YcmCompleter GoTo<CR>
+"goto in split pane
+nnoremap <leader>gtn :vertical split \| YcmCompleter GoTo<CR>
 "manually trigger popup
 nnoremap <leader>D <plug>(YCMHover)
 let g:ycm_auto_hover="" "disable auto popup at cursor
