@@ -136,6 +136,7 @@ Plug 'preservim/nerdcommenter' "quick commenter ('\cc' to comment out,'\cu' to u
 Plug 'jiangmiao/auto-pairs' "auto add, delete bracket pairs
 Plug 'tpope/vim-surround' "vim surround
 Plug 'neoclide/jsonc.vim' "add JSON comment filetype
+Plug 'rhysd/vim-clang-format' "clang format for Vim
 
 "colorschemes
 Plug 'flazz/vim-colorschemes'  "All colorschemes
