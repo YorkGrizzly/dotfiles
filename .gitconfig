@@ -1,0 +1,15 @@
+[user]
+        name = Tien-Shuo Chang
+        email = tienshuo.chang@sambanovasystems.com
+[filter "lfs"]
+        process = git-lfs filter-process
+        required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+[diff]
+        tool = vimdiff
+[difftool]
+        prompt = false
+[alias]
+        b = !git branch -vv
+        pnto = !git push -u origin $(git symbolic-ref --short HEAD)
