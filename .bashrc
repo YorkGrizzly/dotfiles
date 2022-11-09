@@ -12,6 +12,7 @@ alias tmux="tmux -2" # force tmux to recognize 256 colors
 
 # git bash completion
 source /etc/bash_completion.d/git-prompt
+source /usr/share/bash-completion/completions/git
 
 
 ###### add to .bash_profile
