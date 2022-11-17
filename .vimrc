@@ -146,7 +146,8 @@ Plug 'tomasr/molokai'
 Plug 'sonph/onehalf', { 'rtp': 'vim'  }
 Plug 'ayu-theme/ayu-vim'  "light, mirage, dark
 Plug 'lifepillar/vim-solarized8'  "set background=light/dark
-"Tomorrow-Night
+Plug 'arcticicestudio/nord-vim'  "requires nord theme on terminal
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
