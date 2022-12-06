@@ -12,4 +12,6 @@
         prompt = false
 [alias]
         b = !git branch -vv
+        s = !git status
         pnto = !git push -u origin $(git symbolic-ref --short HEAD)
+        mm = !git fetch && git merge origin/main
