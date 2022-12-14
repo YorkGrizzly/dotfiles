@@ -10,7 +10,7 @@ alias ll='ls -alF'
 # alias tmux="env TERM=screen-256color tmux" # enable bold and italics in TMUX, however disables cursor straight line in vim somehow
 alias tmux="tmux -2" # force tmux to recognize 256 colors
 alias ta="tmux a -t"
-alias tl="tmus ls"
+alias tl="tmux ls"
 
 # git bash completion
 source /etc/bash_completion.d/git-prompt
