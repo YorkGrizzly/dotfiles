@@ -137,6 +137,7 @@ Plug 'jiangmiao/auto-pairs' "auto add, delete bracket pairs
 Plug 'tpope/vim-surround' "vim surround
 Plug 'neoclide/jsonc.vim' "add JSON comment filetype
 Plug 'rhysd/vim-clang-format' "clang format for Vim
+Plug 'rickhowe/spotdiff.vim' "diff parts of files
 
 "colorschemes
 Plug 'flazz/vim-colorschemes'  "All colorschemes
