@@ -1,4 +1,4 @@
-"Indentation Options
+"""""""""""""""""""""""""""""""""""""  Indentation Options  """""""""""""""""""""""""""""""""""""
 set autoindent "New lines inherit the indentation of previous lines
 set expandtab "Convert tabs to spaces
 filetype plugin indent on "Enable indentation rules, syntax highlighting that are file-type specific
@@ -7,25 +7,29 @@ set smarttab "Insert "tabstop" number of spaces when the "tab" key is pressed
 set softtabstop=4 "Indent using 4 spaces
 set tabstop=4 "Tab size is equal to 4 spaces
 
-"Editing Options
+
+"""""""""""""""""""""""""""""""""""""  Editing Options  """""""""""""""""""""""""""""""""""""
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  "Disable autocommenting on newline
   "creates line when in insert mode
 au InsertEnter * set cul
 au InsertLeave * set nocul
 
-"Search Options
+
+"""""""""""""""""""""""""""""""""""""  Search Options  """""""""""""""""""""""""""""""""""""
 set hlsearch "Enable search highlighting
 set ignorecase "Ignore case when searching
 set incsearch "Incremental search that shows partial matches
 set smartcase "Automatically switch search to case-sensitive when search query contains an uppercase letter
 set shortmess-=S "show search match counts
 
-"Performance Options
+
+"""""""""""""""""""""""""""""""""""""  Performance Options  """""""""""""""""""""""""""""""""""""
 set complete-=i "Limit the files searched for auto-completes
 set ssop-=options "Do not store global and local values in a session
 set ssop-=folds "Do not store folds
 
-"Text Rendering Options
+
+"""""""""""""""""""""""""""""""""""""  Text Rendering Options  """""""""""""""""""""""""""""""""""""
 set foldmethod=indent "Fold based on indentation levels
 "set foldmethod=syntax "set folds by syntax (this might cause lags)
 set foldlevelstart=99 "open file with all folds open
@@ -36,7 +40,8 @@ set scrolloff=1 "The number of screen lines to keep above and below the cursor (
 syntax enable "Enable syntax highlighting
 set wrap "Enable line wrapping (display on newline when line is full to prevent horizontal scrolling
 
-"User Interface Options
+
+"""""""""""""""""""""""""""""""""""""  User Interface Options  """""""""""""""""""""""""""""""""""""
 set laststatus=2 "Always display the status bar
 set ruler "Always show cursor position in status bar
 set wildmenu "Display command line's tab complete options as a menu
@@ -47,7 +52,8 @@ set title "set the window's title, reflecting the file currently being edited
 "set updatetime=500 "time in milliseconds to hold cursor for popup
 set completeopt=popup "override completion so it shows in popup rather than pane (YCM doesn't create new window)
 
-"Miscellaneous Options
+
+"""""""""""""""""""""""""""""""""""""  Miscellaneous Options  """""""""""""""""""""""""""""""""""""
 set backspace=indent,eol,start "Allow backspacing over indentation, line breaks and insertion start
 "set confirm "Display a confirmation dialog when closing an unsaved file
 set history=1000 "Increase the undo limit
@@ -56,20 +62,23 @@ set history=1000 "Increase the undo limit
 set nocompatible "Enable enhancements and improvements of Vi
 
 
-
-
-"KEY MAPPINGS
+"""""""""""""""""""""""""""""""""""""""""""""""  KEY MAPPINGS  """""""""""""""""""""""""""""""""""""""""""""""
 "remap esc, enter normal mode by typing two j (remember to remove trailing whitespace for following, else jumps)
 imap jj <Esc>
 "press 'J'/'K' in visual mode to move selected text down/up with autoformatting
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-"let mapleader="\" "set leader
-nnoremap <leader>bo :vnew +setl\ buftype=nofile <bar> 0put =v:oldfiles <bar> nnoremap <lt>buffer> <lt>CR> :e <lt>C-r>=getline('.')<lt>CR><lt>CR><CR><CR>gg "browse old files in new tab with search and enter enabled
+"quickly disable line numbers, useful for copy paste
+nnoremap <leader>nn :set nonumber norelativenumber <CR>
+nnoremap <leader>sn :set number relativenumber <CR>
 
-"press <leader>g for git message over cursor
-map <silent><Leader>g :call setbufvar(winbufnr(popup_atcursor(systemlist("cd " . shellescape(fnamemodify(resolve(expand('%:p')), ":h")) . " && git log --no-merges -n 1 -L " . shellescape(line("v") . "," . line(".") . ":" . resolve(expand("%:p")))), { "padding": [1,1,1,1], "pos": "botleft", "wrap": 0 })), "&filetype", "git")<CR>
+"map quitall, useful for git difftool
+nnoremap ZQA :qa <CR>
+
+"load ~/.vimrc quickly
+nnoremap <leader>lv :source ~/.vimrc <CR>
+
 
 """"""""""""""""""""" set cursor to straight line in insert mode """""""""""""""""""""""
 " good for MobaXterm, but has to change cursor to straight line by default in settings
@@ -172,6 +181,9 @@ nnoremap <leader>nt :NERDTree<CR> "shortcut to toggle NERDTree
 nnoremap <leader>tl :Tlist<CR>
 let Tlist_Process_File_Always = 1 "process tags even when Tlist is off
 let Tlist_Show_One_File = 1 "only show Tlist of current buffer
+
+"press <leader>g for git message over cursor
+map <silent><Leader>g :call setbufvar(winbufnr(popup_atcursor(systemlist("cd " . shellescape(fnamemodify(resolve(expand('%:p')), ":h")) . " && git log --no-merges -n 1 -L " . shellescape(line("v") . "," . line(".") . ":" . resolve(expand("%:p")))), { "padding": [1,1,1,1], "pos": "botleft", "wrap": 0 })), "&filetype", "git")<CR>
 
 let g:lightline = {
 \ 'colorscheme': 'Tomorrow_Night_Bright',
