@@ -68,16 +68,18 @@ imap jj <Esc>
 "press 'J'/'K' in visual mode to move selected text down/up with autoformatting
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+"write file
+nnoremap <leader>w :w<CR>
 
 "quickly disable line numbers, useful for copy paste
-nnoremap <leader>nn :set nonumber norelativenumber <CR>
-nnoremap <leader>sn :set number relativenumber <CR>
+nnoremap <leader>nn :set nonumber norelativenumber<CR>
+nnoremap <leader>sn :set number relativenumber<CR>
 
 "map quitall, useful for git difftool
-nnoremap ZQA :qa <CR>
+nnoremap ZQA :qa<CR>
 
 "load ~/.vimrc quickly
-nnoremap <leader>lv :source ~/.vimrc <CR>
+nnoremap <leader>lv :source ~/.vimrc<CR>
 
 
 """"""""""""""""""""" set cursor to straight line in insert mode """""""""""""""""""""""
