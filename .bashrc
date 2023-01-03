@@ -7,6 +7,8 @@ export LS_COLORS="rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5
 alias ls='ls --color'
 alias ll='ls -alF'
 
+alias grep='grep --color=always'
+
 # alias tmux="env TERM=screen-256color tmux" # enable bold and italics in TMUX, however disables cursor straight line in vim somehow
 alias tmux="tmux -2" # force tmux to recognize 256 colors
 alias ta="tmux a -t"
