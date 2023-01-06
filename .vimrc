@@ -74,6 +74,8 @@ nnoremap <leader>w :w<CR>
 "quickly disable line numbers, useful for copy paste
 nnoremap <leader>nn :set nonumber norelativenumber<CR>
 nnoremap <leader>sn :set number relativenumber<CR>
+"set syntax on
+nnoremap <leader>ss :set syntax=on<CR>: syntax on<CR>
 
 "map quitall, useful for git difftool
 nnoremap ZQA :qa<CR>
