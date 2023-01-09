@@ -151,6 +151,7 @@ Plug 'tpope/vim-surround' "vim surround
 Plug 'neoclide/jsonc.vim' "add JSON comment filetype
 Plug 'rhysd/vim-clang-format' "clang format for Vim
 Plug 'rickhowe/spotdiff.vim' "diff parts of files
+Plug 'whiteinge/diffconflicts' "two-way diff for conflict-marked files
 
 "colorschemes
 Plug 'flazz/vim-colorschemes'  "All colorschemes
