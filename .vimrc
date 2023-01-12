@@ -70,6 +70,8 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 "write file
 nnoremap <leader>w :w<CR>
+"quit file
+nnoremap <leader>q :q<CR>
 
 "quickly disable line numbers, useful for copy paste
 nnoremap <leader>nn :set nonumber norelativenumber<CR>
