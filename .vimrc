@@ -73,6 +73,9 @@ nnoremap <leader>w :w<CR>
 "quit file
 nnoremap <leader>q :q<CR>
 
+"search pattern
+nnoremap <leader>f <ESC>/
+
 "quickly disable line numbers, useful for copy paste
 nnoremap <leader>nn :set nonumber norelativenumber<CR>
 nnoremap <leader>sn :set number relativenumber<CR>
