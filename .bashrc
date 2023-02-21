@@ -9,6 +9,8 @@ alias ll='ls -lF'
 alias lla='ls -alF'
 
 alias grep='grep --color=always'
+alias search='grep -irn . -e'
+alias findfile='find . | grep -i'
 
 # alias tmux="env TERM=screen-256color tmux" # enable bold and italics in TMUX, however disables cursor straight line in vim somehow
 alias tmux="tmux -2" # force tmux to recognize 256 colors
