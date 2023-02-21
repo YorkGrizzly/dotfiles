@@ -77,3 +77,8 @@ parse_git_branch() {
 
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+""""""""""""""""""""""""""""""""""""" Terminal Packages """"""""""""""""""""""""""""""""""""""""
+" Fuzzy Finder
+"git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+"~/.fzf/install
