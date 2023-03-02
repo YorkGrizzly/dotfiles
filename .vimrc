@@ -80,7 +80,7 @@ nnoremap <leader>f <ESC>/
 nnoremap <leader>nn :set nonumber norelativenumber<CR>
 nnoremap <leader>sn :set number relativenumber<CR>
 "set syntax on
-nnoremap <leader>ss :set syntax=on<CR>: syntax on<CR>
+nnoremap <leader>ss :set syntax=on<CR>: syntax on<CR>:RainbowLoad <CR>
 
 "map quitall, useful for git difftool
 nnoremap ZQA :qa<CR>
