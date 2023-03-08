@@ -51,6 +51,7 @@ set mouse=a "Enable mouse for scrolling and resizing
 set title "set the window's title, reflecting the file currently being edited
 "set updatetime=500 "time in milliseconds to hold cursor for popup
 set completeopt=popup "override completion so it shows in popup rather than pane (YCM doesn't create new window)
+set redrawtime=10000 "Give more time to redraw.
 
 
 """""""""""""""""""""""""""""""""""""  Miscellaneous Options  """""""""""""""""""""""""""""""""""""
