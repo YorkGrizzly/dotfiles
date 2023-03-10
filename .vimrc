@@ -170,6 +170,7 @@ Plug 'lifepillar/vim-solarized8'  "set background=light/dark
 Plug 'arcticicestudio/nord-vim'  "requires nord theme on terminal
 Plug 'tomasiser/vim-code-dark'  "codedark
 Plug 'mhartington/oceanic-next'  "OceanicNext
+Plug 'sainnhe/sonokai'  "Sonokai
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -212,6 +213,13 @@ let g:lightline = {
 \
 \ },
 \}
+
+
+""" Colorscheme Pugin Settings """
+"Sonokai colorscheme settings
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 0
+let g:sonokai_disable_italic_comment = 1
 
 let g:molokai_original = 1
 "let g:gruvbox_italic=1
