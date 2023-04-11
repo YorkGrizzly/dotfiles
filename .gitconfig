@@ -13,8 +13,11 @@
 [alias]
         b = !git branch -vv
         s = !git status
+        dt = !git difftool
         pnto = !git push -u origin $(git symbolic-ref --short HEAD)
         mm = !git fetch && git pull origin main
         su = !git submodule update --init --recursive
 [pager]
         branch = false
+[submodule]
+        recurse = true
