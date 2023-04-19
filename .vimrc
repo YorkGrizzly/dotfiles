@@ -73,6 +73,7 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <leader>w :w<CR>
 "quit file
 nnoremap <leader>q :q<CR>
+nnoremap <leader>qa :qa<CR>
 
 "search pattern
 nnoremap <leader>f <ESC>/
