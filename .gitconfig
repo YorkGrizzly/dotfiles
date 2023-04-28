@@ -10,6 +10,8 @@
         tool = vimdiff
 [difftool]
         prompt = false
+[merge]
+        tool = vimdiff
 [alias]
         b = !git branch -vv
         s = !git status
