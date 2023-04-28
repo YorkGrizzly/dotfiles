@@ -77,6 +77,8 @@ nnoremap <leader>qa :qa<CR>
 
 "search pattern
 nnoremap <leader>f <ESC>/
+" search for visually hightlighted text
+vnoremap <leader>sv y<ESC>/<c-r>"<CR>  "
 
 "quickly disable line numbers, useful for copy paste
 nnoremap <leader>nn :set nonumber norelativenumber<CR>
