@@ -140,7 +140,12 @@ Plug 'tpope/vim-fugitive' "git
 Plug 'rhysd/git-messenger.vim' "reveal message from git under cursor
 Plug 'preservim/nerdtree'
 Plug 'yegappan/taglist' "taglist
-Plug 'ctrlpvim/ctrlp.vim' "CtrlP fuzzy finder
+
+""" FZF (filefinder) """
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+nnoremap <C-a> :FZF<CR>
+
+
 Plug 'google/vim-searchindex' "show search counts greater than 99
 Plug 'jlanzarotta/bufexplorer' "buffer explorer
 Plug 'itchyny/lightline.vim' "lightline (status bar)
@@ -177,10 +182,6 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""" Plugin-specific settings """"""""""""""""""""
-noremap <C-a> :CtrlP $SCRATH_HOME<CR> "set CtrlP search root and search in it
-let g:ctrlp_max_depth = 100
-let g:ctrlp_max_files = 100000
-
 "remap GoTo for YCM
 nnoremap <leader>gt :YcmCompleter GoTo<CR>
 "goto in split pane
