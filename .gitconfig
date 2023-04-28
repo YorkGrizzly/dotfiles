@@ -23,3 +23,5 @@
         recurse = true
 [color]
         ui = true
+[push]
+        default = simple
