@@ -21,3 +21,5 @@
         branch = false
 [submodule]
         recurse = true
+[color]
+        ui = true
