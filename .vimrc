@@ -80,9 +80,9 @@ nnoremap <leader>f <ESC>/
 " search for visually hightlighted text
 vnoremap <leader>sv y<ESC>/<c-r>"<CR>  "
 
-"quickly disable line numbers, useful for copy paste
-nnoremap <leader>nn :set nonumber norelativenumber<CR>
-nnoremap <leader>sn :set number relativenumber<CR>
+"quickly disable line numbers and signcolumn, useful for copy paste
+nnoremap <leader>nn :set nonumber norelativenumber<CR>:set signcolumn=no<CR>
+nnoremap <leader>sn :set number relativenumber<CR>: set signcolumn=yes<CR>
 "set syntax on
 nnoremap <leader>ss :set syntax=on<CR>: syntax on<CR>:RainbowLoad <CR>
 
