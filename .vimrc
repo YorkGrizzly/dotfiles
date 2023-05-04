@@ -192,7 +192,7 @@ nnoremap <leader>gtn :vertical split \| YcmCompleter GoTo<CR>
 nnoremap <leader>D <plug>(YCMHover)
 let g:ycm_auto_hover="" "disable auto popup at cursor
 
-nnoremap <leader>nt :NERDTree<CR> "shortcut to toggle NERDTree
+nnoremap <leader>nt :NERDTreeToggle<CR> "shortcut to toggle NERDTree
 "au VimEnter *  NERDTree  "toggle NERDTree by default
 
 nnoremap <leader>tb :TagbarToggle<CR>
