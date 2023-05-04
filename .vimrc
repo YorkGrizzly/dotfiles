@@ -141,7 +141,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive' "git
 Plug 'rhysd/git-messenger.vim' "reveal message from git under cursor
 Plug 'preservim/nerdtree'
-Plug 'yegappan/taglist' "taglist
+Plug 'preservim/tagbar' "taglist
 
 """ FZF (filefinder) """
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -195,9 +195,7 @@ let g:ycm_auto_hover="" "disable auto popup at cursor
 nnoremap <leader>nt :NERDTree<CR> "shortcut to toggle NERDTree
 "au VimEnter *  NERDTree  "toggle NERDTree by default
 
-nnoremap <leader>tl :Tlist<CR>
-let Tlist_Process_File_Always = 1 "process tags even when Tlist is off
-let Tlist_Show_One_File = 1 "only show Tlist of current buffer
+nnoremap <leader>tb :TagbarToggle<CR>
 
 "press <leader>g for git message over cursor
 map <silent><Leader>g :call setbufvar(winbufnr(popup_atcursor(systemlist("cd " . shellescape(fnamemodify(resolve(expand('%:p')), ":h")) . " && git log --no-merges -n 1 -L " . shellescape(line("v") . "," . line(".") . ":" . resolve(expand("%:p")))), { "padding": [1,1,1,1], "pos": "botleft", "wrap": 0 })), "&filetype", "git")<CR>
