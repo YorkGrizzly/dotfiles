@@ -75,6 +75,9 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qa :qa<CR>
 
+"center cursor on middle of screen horizontal
+nnoremap zZ zszH
+
 "search pattern
 nnoremap <leader>f <ESC>/
 " search for visually hightlighted text
