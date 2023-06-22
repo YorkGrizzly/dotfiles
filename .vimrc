@@ -50,7 +50,7 @@ set relativenumber "Show relative numbers to current line
 set mouse=a "Enable mouse for scrolling and resizing
 set title "set the window's title, reflecting the file currently being edited
 "set updatetime=500 "time in milliseconds to hold cursor for popup
-set completeopt=popup "override completion so it shows in popup rather than pane (YCM doesn't create new window)
+set completeopt=popup "override completion so it shows in popup rather than pane
 set redrawtime=10000 "Give more time to redraw.
 
 
@@ -187,18 +187,54 @@ Plug 'arcticicestudio/nord-vim'  "requires nord theme on terminal
 Plug 'tomasiser/vim-code-dark'  "codedark
 Plug 'mhartington/oceanic-next'  "OceanicNext
 Plug 'sainnhe/sonokai'  "Sonokai
+
+""""""""""""""""""""""""""COC-related configs (begin) """"""""""""""""""""""""""""
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_config="$HOME/.vim/coc-settings.json"
+set nobackup
+set nowritebackup
+set updatetime=300
+set signcolumn=yes
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+            \ CheckBackspace() ? "\<Tab>" :
+                  \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+function! CheckBackspace() abort
+      let col = col('.') - 1
+        return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" Use K to show documentation in preview window
+nnoremap <silent> K :call ShowDocumentation()<CR>
+function! ShowDocumentation()
+      if CocAction('hasProvider', 'hover')
+              call CocActionAsync('doHover')
+                else
+                        call feedkeys('K', 'in')
+                          endif
+endfunction
+""""""""""""""""""""""""""""COC-related configs (end) """"""""""""""""""""""""""""
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""" Plugin-specific settings """"""""""""""""""""
-"remap GoTo for YCM
-nnoremap <leader>gt :YcmCompleter GoTo<CR>
-"goto in split pane
-nnoremap <leader>gtn :vertical split \| YcmCompleter GoTo<CR>
-"manually trigger popup
-nnoremap <leader>D <plug>(YCMHover)
-let g:ycm_auto_hover="" "disable auto popup at cursor
 
 nnoremap <leader>nt :NERDTreeToggle<CR> "shortcut to toggle NERDTree
 "au VimEnter *  NERDTree  "toggle NERDTree by default
