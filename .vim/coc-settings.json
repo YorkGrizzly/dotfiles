@@ -1,0 +1,41 @@
+{
+    "suggest.noselect": true,
+    // "languageserver": {
+        // "clangd": {
+            // "command": "clangd",
+            // "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+            // "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+
+            // }
+
+            // },
+            "languageserver": {
+                "ccls": {
+                    "command": "ccls",
+                    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+                    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+                    "trace.server": "verbose",
+                    "initializationOptions": {
+                        "cache": {
+                            "directory": "/tmp/ccls"
+
+                        }
+
+                    }
+
+                }
+
+            },
+
+            // C++
+            "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
+            "clangd.arguments": ["-j=10"],
+            // Python
+            "python.pythonPath": "python",
+            "python.linting.enabled": false,
+            "python.formatting.provider": "yapf",
+            "python.formatting.yapfArgs": ["--style /opt/software/infra/python/.style.yapf"],
+            // "python.linting.enabled": true
+
+
+}
