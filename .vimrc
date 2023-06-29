@@ -83,6 +83,13 @@ nnoremap <leader>f <ESC>/
 " search for visually hightlighted text
 vnoremap <leader>sv y<ESC>/<c-r>"<CR>  "
 
+"display buffer list
+nmap <leader>F <leader>be
+"vertical split and select from buffer list
+nmap <leader>vsF <CR>:vs<CR><leader>be
+"horizontal split and select from buffer list
+nmap <leader>sF <CR>:split<CR><leader>be
+
 "quickly disable line numbers and signcolumn, useful for copy paste
 nnoremap <leader>nn :set nonumber norelativenumber<CR>:set signcolumn=no<CR>
 nnoremap <leader>sn :set number relativenumber<CR>: set signcolumn=yes<CR>
