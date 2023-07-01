@@ -161,7 +161,7 @@ nnoremap <C-a> :FZF<CR>
 Plug 'google/vim-searchindex' "show search counts greater than 99
 Plug 'jlanzarotta/bufexplorer' "buffer explorer
 Plug 'itchyny/lightline.vim' "lightline (status bar)
-Plug 'Plug 'edkolev/tmuxline.vim'  "Style tmux bar with vim line.
+Plug 'edkolev/tmuxline.vim'  "Style tmux bar with vim line.
 
 "editing
 "Plug 'ycm-core/YouCompleteMe' "just run `python3 install.py --clangd-completer` to build with only C-family support avoiding errors for other languages.
