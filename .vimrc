@@ -92,6 +92,7 @@ nmap <leader>sF <CR>:split<CR><leader>be
 
 "quickly disable line numbers and signcolumn, useful for copy paste
 nnoremap <leader>nn :set nonumber norelativenumber<CR>:set signcolumn=no<CR>
+nnoremap <leader>san :set number norelativenumber<CR>:set signcolumn=yes<CR>
 nnoremap <leader>sn :set number relativenumber<CR>: set signcolumn=yes<CR>
 "set syntax on
 nnoremap <leader>ss :set syntax=on<CR>: syntax on<CR>:RainbowLoad <CR>
