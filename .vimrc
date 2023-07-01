@@ -243,7 +243,8 @@ call plug#end()
 
 """""""""""""" Plugin-specific settings """"""""""""""""""""
 
-nnoremap <leader>nt :NERDTreeToggle<CR> "shortcut to toggle NERDTree
+"shortcut to toggle NERDTree
+nnoremap <leader>nt :NERDTreeToggle<CR>
 "au VimEnter *  NERDTree  "toggle NERDTree by default
 
 nnoremap <leader>tb :TagbarToggle<CR>
