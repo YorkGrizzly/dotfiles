@@ -281,7 +281,7 @@ let g:molokai_original = 1
 
 
 """"""""""""""""""" appearances """""""""""""""""""""""
-set guifont=Roboto_Mono_Medium:h11  "when using gVim, terminal VIM uses whatever font the terminal uses
+set guifont=Fira_Code:h11  "when using gVim, terminal VIM uses whatever font the terminal uses
 colorscheme OceanicNext
 set background=dark "Vim will try to use colors that suit a dark background
 set termguicolors  "enable true colors support ( set `xterm-256color` for accurate colors )
