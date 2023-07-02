@@ -73,6 +73,9 @@ return require('packer').startup(function(use)
     --     show_end_of_line = true,
     -- }
 
+    -- Zen mode.
+    use 'folke/zen-mode.nvim'
+
     ----------------------------- Terminal ----------------------------------
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
@@ -221,6 +224,7 @@ return require('packer').startup(function(use)
         hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
     end, {remap=true})
     vim.keymap.set('n', '<leader>hw', ':HopWord<CR>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>hv', ':HopVertical<CR>', { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>hls', ':HopLineStart<CR>', { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>hp', ':HopPattern<CR>', { noremap = true, silent = true })
 
