@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+#   export EDITOR='nvim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -106,7 +106,7 @@ alias lla='ls -alF'
 # folder navigation
 alias gtks='cd ~/kosmos'
 
-alias of='fzf --bind "enter:become(vim {})"'
+alias of='fzf --bind "enter:become(nvim {})"'
 
 alias dv='dirs -v'
 # alias zshconfig="mate ~/.zshrc"
@@ -116,5 +116,5 @@ alias dv='dirs -v'
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export REACT_EDITOR=vim
+export REACT_EDITOR=nvim
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
