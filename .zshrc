@@ -106,6 +106,8 @@ alias lla='ls -alF'
 # folder navigation
 alias gtks='cd ~/kosmos'
 
+alias of='fzf --bind "enter:become(vim {})"'
+
 alias dv='dirs -v'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -113,3 +115,6 @@ alias dv='dirs -v'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+export REACT_EDITOR=vim
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
