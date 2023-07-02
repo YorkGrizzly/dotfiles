@@ -69,9 +69,10 @@ return require('packer').startup(function(use)
     -- vim.opt.list = true
     -- vim.opt.listchars:append "eol:↴"
     --
-    -- require("indent_blankline").setup {
-    --     show_end_of_line = true,
-    -- }
+    require("indent_blankline").setup {
+        show_current_context = true,
+        -- show_end_of_line = true,
+    }
 
     -- Zen mode.
     use 'folke/zen-mode.nvim'
@@ -199,6 +200,9 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
+    -- Display hex colors.
+    use 'norcalli/nvim-colorizer.lua'
+
     -- Hop
     use {
         'phaazon/hop.nvim',
@@ -227,6 +231,8 @@ return require('packer').startup(function(use)
     vim.keymap.set('n', '<leader>hv', ':HopVertical<CR>', { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>hls', ':HopLineStart<CR>', { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>hp', ':HopPattern<CR>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>ha', ':HopAnywhere<CR>', { noremap = true, silent = true })
+    
 
     --------------------------------------------- COC Code completion. (begin) ------------------------------------------------
     use {'neoclide/coc.nvim', branch = 'release'}
@@ -298,4 +304,3 @@ return require('packer').startup(function(use)
         require('packer').sync()
     end
 end)
-
