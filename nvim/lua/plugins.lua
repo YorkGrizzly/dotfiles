@@ -88,6 +88,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
     use 'rhysd/git-messenger.vim'           -- Reveal message from git under cursor.
     use "sindrets/diffview.nvim"            -- Git diff page.
+    use 'whiteinge/diffconflicts'           -- Git diff conflicts.
 
     -- Fuzzy finder.
     use {
