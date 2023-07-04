@@ -181,6 +181,9 @@ return require('packer').startup(function(use)
                     post_hook = nil,
                 }
             })
+            -- For self-defined syntax. Add these two lines. E.g '.list', commentstring = '#'
+            --local ft = require('Comment.ft')
+            --ft.set('list', {'#%s'})
         end
     }
 
