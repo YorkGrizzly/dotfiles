@@ -299,6 +299,13 @@ return require('packer').startup(function(use)
 
     --------------------------------------------- COC Code completion. (end) ------------------------------------------------
 
+    --------------------------------------------------- Filetypes (begin) ---------------------------------------------------
+    use('neoclide/jsonc.vim')
+    use('mtdl9/vim-log-highlighting')                                   -- Generic log file highlighting.
+   
+    --------------------------------------------------- Filetypes (end) -----------------------------------------------------
+
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
