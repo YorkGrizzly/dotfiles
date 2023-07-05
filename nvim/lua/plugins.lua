@@ -73,6 +73,8 @@ return require('packer').startup(function(use)
         show_current_context = true,
         -- show_end_of_line = true,
     }
+    vim.keymap.set('n', '<leader>ibld', ':IndentBlanklineDisable<CR>', { noremap = true })
+    vim.keymap.set('n', '<leader>ible', ':IndentBlanklineEnable<CR>', { noremap = true })
 
     -- Zen mode.
     use 'folke/zen-mode.nvim'
