@@ -28,4 +28,11 @@
         "value": "  ",
         "enumMember": "  "
     },
+
+    // coc-git
+    "git.showCommitInFloating": true,
+    "git.floatConfig": {  // Configure floating window.
+        "border": true,   // Border
+        "winblend": 5     // Transparency
+    }
 }
