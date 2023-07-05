@@ -86,7 +86,6 @@ return require('packer').startup(function(use)
     ------------------ Editor Versioning & File Navigation ------------------
     -- Git
     use 'tpope/vim-fugitive'
-    use 'rhysd/git-messenger.vim'           -- Reveal message from git under cursor.
     use "sindrets/diffview.nvim"            -- Git diff page.
     use 'whiteinge/diffconflicts'           -- Git diff conflicts.
 
@@ -299,6 +298,8 @@ return require('packer').startup(function(use)
     end
     keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
 
+    -- coc-git
+    keyset('n', '<leader>g', "<Plug>(coc-git-commit)", {})             -- Git commit info under cursor.
 
     --------------------------------------------- COC Code completion. (end) ------------------------------------------------
 
