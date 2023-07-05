@@ -1,6 +1,8 @@
 vim.opt.clipboard = 'unnamedplus'   -- use system clipboard 
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+
 ----------------------------------- Indentation -----------------------------------
 vim.opt.tabstop = 4                 -- Tab size is equal to 4 spaces.
 vim.opt.softtabstop = 4             -- Indent using 4 spaces.
