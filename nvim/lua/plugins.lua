@@ -101,7 +101,12 @@ return require('packer').startup(function(use)
     local builtin = require('telescope.builtin')
     require('telescope').setup {
         defaults = {
-            wrap_results = true,        -- Enable wrap around.
+            path_display = {
+                shorten = {
+                    len = 5, exclude = { 1, -1 }            -- Truncate to show 5 letters, except first and first to last.
+                }
+            },
+            wrap_results = true,                            -- Enable wrap around.
         }
     }
     vim.keymap.set('n', '<leader>ff', builtin.find_files, {})      -- Find files.
