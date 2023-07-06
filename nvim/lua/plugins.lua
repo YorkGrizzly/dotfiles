@@ -99,6 +99,11 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     local builtin = require('telescope.builtin')
+    require('telescope').setup {
+        defaults = {
+            wrap_results = true,        -- Enable wrap around.
+        }
+    }
     vim.keymap.set('n', '<leader>ff', builtin.find_files, {})      -- Find files.
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})       -- Grep amongst files.
     vim.keymap.set('n', '<leader>fb', builtin.buffers, {})         -- Find file in buffer list.
