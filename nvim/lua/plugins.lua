@@ -37,7 +37,8 @@ return require('packer').startup(function(use)
 
     --------------------------- Colorschemes ---------------------------
     use 'tanvirtin/monokai.nvim'
-    use "EdenEast/nightfox.nvim"
+    use 'EdenEast/nightfox.nvim'
+    use 'projekt0n/github-nvim-theme'
 
     ------------------------------- UI ---------------------------------
     --lualine
