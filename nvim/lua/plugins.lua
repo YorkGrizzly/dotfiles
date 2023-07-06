@@ -50,20 +50,7 @@ return require('packer').startup(function(use)
 
     -- Color brackets.
     use 'p00f/nvim-ts-rainbow'
-    require("nvim-treesitter.configs").setup {
-        highlight = {
-            -- ...
-        },
-        -- ...
-        rainbow = {
-            enable = true,
-            -- disable = { "list" }, list of languages you want to disable the plugin for
-            extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-            max_file_lines = nil, -- Do not enable for files with more than n lines, int
-            -- colors = {}, -- table of hex strings
-            -- termcolors = {} -- table of colour name strings
-        }
-    }
+
 
     -- Indent blankline.
     use "lukas-reineke/indent-blankline.nvim"
@@ -217,7 +204,15 @@ return require('packer').startup(function(use)
     }
     require('nvim-treesitter.configs').setup {
         ensure_installed = { "cpp", "jsonc" },
-        disable = { "list" }
+        disable = { "list" },
+        rainbow = {                -- 'nvim-ts-rainbow' settings.
+            enable = true,
+            -- disable = { "list" }, list of languages you want to disable the plugin for
+            extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+            max_file_lines = nil, -- Do not enable for files with more than n lines, int
+            -- colors = {}, -- table of hex strings
+            -- termcolors = {} -- table of colour name strings
+        }
     }
 
     -- Display hex colors.
