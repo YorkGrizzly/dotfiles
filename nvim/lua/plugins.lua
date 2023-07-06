@@ -39,6 +39,7 @@ return require('packer').startup(function(use)
     use 'tanvirtin/monokai.nvim'
     use 'EdenEast/nightfox.nvim'
     use 'projekt0n/github-nvim-theme'
+    use 'ellisonleao/gruvbox.nvim'
 
     ------------------------------- UI ---------------------------------
     --lualine
