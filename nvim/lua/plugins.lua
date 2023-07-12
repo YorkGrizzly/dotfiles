@@ -68,6 +68,9 @@ return require('packer').startup(function(use)
     -- Zen mode.
     use 'folke/zen-mode.nvim'
 
+    -- Show search count > 99.
+    use 'google/vim-searchindex'
+
     ----------------------------- Terminal ----------------------------------
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
