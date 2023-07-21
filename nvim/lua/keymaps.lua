@@ -17,6 +17,9 @@ vim.keymap.set('n', '<leader>nn', ':set nonumber norelativenumber<CR>:set signco
 vim.keymap.set('n', '<leader>sn', ':set number relativenumber<CR>:set signcolumn=yes<CR>', opts)
 vim.keymap.set('n', '<leader>san', ':set number norelativenumber<CR>:set signcolumn=yes<CR>', opts)
 
+vim.keymap.set('n', '<leader>sb', ':split<CR><Cmd>BufferPick<CR>', opts)
+vim.keymap.set('n', '<leader>vsb', ':vertical split<CR><Cmd>BufferPick<CR>', opts)
+
 -----------------
 -- Insert mode --
 -----------------
