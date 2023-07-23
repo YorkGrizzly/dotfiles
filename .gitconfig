@@ -1,5 +1,5 @@
 [user]
-        name = Tien-Shuo Chang
+        name = tienshuoc
         email = yorkygrizzly@gmail.com
 [filter "lfs"]
         process = git-lfs filter-process
