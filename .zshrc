@@ -103,6 +103,8 @@ alias ls='ls --color'
 alias ll='ls -lF'
 alias lla='ls -alF'
 
+alias findfile='find . | rg'
+
 # folder navigation
 alias gtks='cd ~/kosmos'
 
