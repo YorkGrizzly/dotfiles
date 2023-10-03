@@ -109,6 +109,8 @@ alias findfile='find . | rg'
 alias gtks='cd ~/kosmos'
 
 alias of='fzf --bind "enter:become(nvim {})"'
+alias od='cd $(find . -type d -print | fzf)'
+alias rp='realpath $(find . -type d -o -type f | fzf)'  # Fuzzy search file and return realpath.
 
 alias dv='dirs -v'
 # alias zshconfig="mate ~/.zshrc"
