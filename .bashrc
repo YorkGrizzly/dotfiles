@@ -11,6 +11,8 @@ export LS_COLORS="rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5
 alias ls='ls --color'
 alias ll='ls -lF'
 alias lla='ls -alF'
+alias llt='ls -talF'
+alias llr='echo "Most recent 10." && ls -tlF | head -n10'
 
 alias grep='grep --color=always'
 alias search='grep -irn . -e'
