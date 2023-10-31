@@ -75,6 +75,12 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qa :qa<CR>
 
+"switch panes
+nnoremap <c-h> :wincmd h<CR>
+nnoremap <c-j> :wincmd j<CR>
+nnoremap <c-k> :wincmd k<CR>
+nnoremap <c-l> :wincmd l<CR>
+
 "center cursor on middle of screen horizontal
 nnoremap zZ zszH
 
