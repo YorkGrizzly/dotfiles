@@ -158,6 +158,9 @@ Plug 'preservim/tagbar' "taglist
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 nnoremap <C-a> :FZF<CR>
 
+""" Easymotion
+Plug 'easymotion/vim-easymotion'
+nmap <leader>hw <Plug>(easymotion-bd-w)
 
 Plug 'google/vim-searchindex' "show search counts greater than 99
 Plug 'jlanzarotta/bufexplorer' "buffer explorer
