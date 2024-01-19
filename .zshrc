@@ -107,6 +107,7 @@ alias findfile='find . | rg'
 
 # folder navigation
 alias gtks='cd ~/kosmos'
+alias gtnv='cd ~/.config/nvim'
 
 alias of='fzf --bind "enter:become(nvim {})"'
 alias od='cd $(find . -type d -print | fzf)'
