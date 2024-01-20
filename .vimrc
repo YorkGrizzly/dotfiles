@@ -1,3 +1,4 @@
+let mapleader = ';'
 """""""""""""""""""""""""""""""""""""  Indentation Options  """""""""""""""""""""""""""""""""""""
 set autoindent "New lines inherit the indentation of previous lines
 set expandtab "Convert tabs to spaces
@@ -69,6 +70,7 @@ imap jj <Esc>
 "press 'J'/'K' in visual mode to move selected text down/up with autoformatting
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
 "write file
 nnoremap <leader>w :w<CR>
 "quit file
