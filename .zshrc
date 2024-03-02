@@ -113,6 +113,12 @@ alias of='fzf --bind "enter:become(nvim {})"'
 alias od='cd $(find . -type d -print | fzf)'
 alias rp='realpath $(find . -type d -o -type f | fzf)'  # Fuzzy search file and return realpath.
 
+# Open Vim sessions.
+alias vs1='nvim ~/s1.vim'
+alias vs2='nvim ~/s2.vim'
+alias vs3='nvim ~/s3.vim'
+alias vs4='nvim ~/s4.vim'
+
 alias dv='dirs -v'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
