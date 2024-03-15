@@ -129,3 +129,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 export REACT_EDITOR=nvim
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+# Install instructions: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Install: git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
