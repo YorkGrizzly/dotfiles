@@ -65,12 +65,19 @@ ZSH_THEME="simple"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
+####################################################### PLUGINS (begin) ###########################################################
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git git-prompt)
+
+# Install instructions: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Install: git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+####################################################### PLUGINS (end) ###########################################################
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,15 +95,11 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
+####################################################### ALIASES (begin) ###########################################################
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
+
 alias grep='grep --color=always'
 
 alias ls='ls --color'
@@ -104,10 +107,6 @@ alias ll='ls -lF'
 alias lla='ls -alF'
 
 alias findfile='find . | rg'
-
-# folder navigation
-alias gtks='cd ~/kosmos'
-alias gtnv='cd ~/.config/nvim'
 
 alias of='fzf --bind "enter:become(nvim {})"'
 alias od='cd $(find . -type d -print | fzf)'
@@ -122,6 +121,17 @@ alias vs4='nvim -S ~/s4.vim'
 alias dv='dirs -v'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+### >> Project Specific (begin)
+export PROJECT_ROOT='~/kosmos'
+
+### << Project Specific (end)
+
+alias gtnv='cd ~/.config/nvim'
+alias gtpr='cd $PROJECT_ROOT'
+alias oprf='cd $PROJECT_ROOT && fzf --bind "enter:become(nvim {})"'
+####################################################### ALIASES (end) ###########################################################
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -130,8 +140,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export REACT_EDITOR=nvim
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
-# Install instructions: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Install: git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
