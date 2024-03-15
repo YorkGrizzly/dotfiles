@@ -131,6 +131,7 @@ alias gtdf='cd ~/dotfiles'
 alias gtnv='cd ~/.config/nvim'
 alias gtpr='cd $PROJECT_ROOT'
 alias oprf='cd $PROJECT_ROOT && fzf --bind "enter:become(nvim {})"'
+alias oprd='cd $PROJECT_ROOT && cd $(find . -type d -print | fzf)'
 ####################################################### ALIASES (end) ###########################################################
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
