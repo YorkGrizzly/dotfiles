@@ -127,6 +127,7 @@ export PROJECT_ROOT='~/kosmos'
 
 ### << Project Specific (end)
 
+alias gtdf='cd ~/dotfiles'
 alias gtnv='cd ~/.config/nvim'
 alias gtpr='cd $PROJECT_ROOT'
 alias oprf='cd $PROJECT_ROOT && fzf --bind "enter:become(nvim {})"'
