@@ -106,6 +106,10 @@ source $ZSH/oh-my-zsh.sh
 
 alias grep='grep --color=always'
 
+alias tmux="tmux-2.6 -2" # Force TMUX to recognize 256 colors.
+alias ta="tmux at"
+alias tl="tmux ls"
+
 alias ls='ls --color'
 alias ll='ls -lF'
 alias lla='ls -alF'
