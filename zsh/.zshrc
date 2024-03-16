@@ -70,7 +70,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt)
+plugins=(git git-prompt you-should-use)
 
 # Install instructions: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 # source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -152,6 +152,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 export REACT_EDITOR=nvim
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
