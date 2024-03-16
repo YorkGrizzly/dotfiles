@@ -74,7 +74,7 @@ plugins=(git git-prompt you-should-use)
 
 # Install instructions: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 # source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc  # MacOS
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # MacOs
 
 # Install: git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 # source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
