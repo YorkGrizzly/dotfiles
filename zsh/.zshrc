@@ -72,6 +72,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-prompt you-should-use)
 
+# You-Should-Use Configs
+export YSU_IGNORED_ALIASES=("g" "ll")
+
 # Install instructions: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 # source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # MacOs
