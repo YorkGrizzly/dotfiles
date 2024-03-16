@@ -76,6 +76,8 @@ plugins=(
     you-should-use
     # Ctrl-o to copy the current text in the command line to the system clipboard.
     copybuffer
+    # Keyboard shortcuts for navigating directory history and hierarchy.
+    dirhistory
 )
 
 # You-Should-Use Configs
