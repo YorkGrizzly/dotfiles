@@ -70,7 +70,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt you-should-use)
+plugins=(
+    git
+    git-prompt
+    you-should-use
+    # Ctrl-o to copy the current text in the command line to the system clipboard.
+    copybuffer
+)
 
 # You-Should-Use Configs
 export YSU_IGNORED_ALIASES=("g" "ll")
