@@ -80,7 +80,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ####################################################### PLUGINS (end) ###########################################################
 
 ####################################################### FUNCTIONS (begin) ###########################################################
-source $ZSH_CUSTOM/scripts/my_functions.sh
+source $ZSH/custom/scripts/my_functions.sh
 ####################################################### FUNCTIONS (end) ###########################################################
 
 source $ZSH/oh-my-zsh.sh
