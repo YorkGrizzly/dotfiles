@@ -52,7 +52,7 @@ ZSH_THEME="my_theme"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -132,9 +132,10 @@ alias dv='dirs -v'
 
 ### >> Project Specific (begin)
 export PROJECT_ROOT='~/kosmos'
-
 ### << Project Specific (end)
 
+alias ozrc='nvim ~/.zshrc'
+alias szrc='source ~/.zshrc'
 alias gtdf='cd ~/dotfiles'
 alias gtnv='cd ~/.config/nvim'
 alias gtpr='cd $PROJECT_ROOT'
