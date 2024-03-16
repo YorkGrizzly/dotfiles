@@ -133,16 +133,16 @@ alias dv='dirs -v'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ### >> Project Specific (begin)
-export PROJECT_ROOT='~/kosmos'
+export PROJECT_ROOT="~/kosmos"
 ### << Project Specific (end)
 
 alias ozrc='nvim ~/.zshrc'
 alias szrc='source ~/.zshrc'
 alias gtdf='cd ~/dotfiles'
 alias gtnv='cd ~/.config/nvim'
-alias gtpr='cd $PROJECT_ROOT'
-alias oprf='cd $PROJECT_ROOT && fzf --bind "enter:become(nvim {})"'
-alias oprd='cd $PROJECT_ROOT && cd $(find . -type d -print | fzf)'
+alias gtpr="cd $PROJECT_ROOT"
+alias oprf='gtpr && fzf --bind "enter:become(nvim {})"'
+alias oprd='gtpr && cd $(find . -type d -print | fzf)'
 ####################################################### ALIASES (end) ###########################################################
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -152,6 +152,14 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 export REACT_EDITOR=nvim
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
