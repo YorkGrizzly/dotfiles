@@ -159,6 +159,7 @@ alias oprd='gtpr && cd $(find . -type d -print | fzf)'
 ####################################################### ALIASES (end) ###########################################################
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf/shell/key-bindings.zsh ] && source ~/.fzf/shell/key-bindings.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
