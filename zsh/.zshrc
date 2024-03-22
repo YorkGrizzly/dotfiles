@@ -129,7 +129,7 @@ alias lla='ls -alF'
 alias llt='ls -talF'
 alias llr='echo "Most recent 10." && ls -tlF | head -n10'
 
-alias findfile='find . | rg'
+alias findfile='find . | rg -i'
 
 alias of='fzf --bind "enter:become(nvim {})"'
 alias od='cd $(find . -type d -print | fzf)'
