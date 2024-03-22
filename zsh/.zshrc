@@ -131,9 +131,9 @@ alias llr='echo "Most recent 10." && ls -tlF | head -n10'
 
 alias findfile='find . | rg -i'
 
-alias of='fzf --bind "enter:become(nvim {})"'
-alias od='cd $(find . -type d -print | fzf)'
-alias rp='realpath $(find . -type d -o -type f | fzf)'  # Fuzzy search file and return realpath.
+alias of='fzf -i --bind "enter:become(nvim {})"'
+alias od='cd $(find . -type d -print | fzf -i)'
+alias rp='realpath $(find . -type d -o -type f | fzf -i)'  # Fuzzy search file and return realpath.
 
 # Open Vim sessions.
 alias vs1='nvim -S ~/s1.vim'
@@ -154,8 +154,8 @@ alias szrc='source ~/.zshrc'
 alias gtdf='cd ~/dotfiles'
 alias gtnv='cd ~/.config/nvim'
 alias gtpr="cd $PROJECT_ROOT"
-alias oprf='gtpr && fzf --bind "enter:become(nvim {})"'
-alias oprd='gtpr && cd $(find . -type d -print | fzf)'
+alias oprf='gtpr && fzf -i --bind "enter:become(nvim {})"'
+alias oprd='gtpr && cd $(find . -type d -print | fzf -i)'
 ####################################################### ALIASES (end) ###########################################################
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
