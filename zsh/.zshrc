@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='nvim'
 
 ####################################################### ALIASES (begin) ###########################################################
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -131,7 +132,7 @@ alias llr='echo "Most recent 10." && ls -tlF | head -n10'
 
 alias findfile='find . | rg -i'
 
-alias of='fzf -i --bind "enter:become(nvim {})"'
+alias of='fzf -i --bind "enter:become($EDITOR {})"'
 alias od='cd $(find . -type d -print | fzf -i)'
 alias rp='realpath $(find . -type d -o -type f | fzf -i)'  # Fuzzy search file and return realpath.
 
@@ -149,12 +150,12 @@ alias dv='dirs -v'
 export PROJECT_ROOT="~/kosmos"
 ### << Project Specific (end)
 
-alias ozrc='nvim ~/.zshrc'
+alias ozrc="$EDITOR ~/.zshrc"
 alias szrc='source ~/.zshrc'
 alias gtdf='cd ~/dotfiles'
 alias gtnv='cd ~/.config/nvim'
 alias gtpr="cd $PROJECT_ROOT"
-alias oprf='gtpr && fzf -i --bind "enter:become(nvim {})"'
+alias oprf='gtpr && fzf -i --bind "enter:become($EDITOR {})"'
 alias oprd='gtpr && cd $(find . -type d -print | fzf -i)'
 ####################################################### ALIASES (end) ###########################################################
 
