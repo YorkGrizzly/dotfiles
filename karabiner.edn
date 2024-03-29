@@ -1,0 +1,92 @@
+; -- Examples
+; https://github.com/kaushikgopal/dotfiles/blob/master/.karabiner.edn
+;;;; COLEMAK (recognizes the literal key on the keykoard)
+{
+ :profiles {
+    :Default {
+        :default true
+
+        :sim     25     ;; simultaneous key press threshold (def: 50)
+                        ;; simlayer is implemented with to_if_alone and simultaneous key press feature
+                        ;; if keydown event for two different keys are pressed within :sim ms, the keypresses are considered simultaneous
+        :delay   10    ;; to_delayed_action_delay_milliseconds (def: 500)
+                       ;; checkout karabiner's documentation
+                       ;; https://pqrs.org/osx/karabiner/json.html
+                       ;; basically it means time after which the key press is count delayed
+
+                        ;; after :delay ms, the key press is considered to be delayed
+                        ;; (used for double-press macros)
+        :alone   250    ;; to_if_alone_timeout_milliseconds (def: 1000)
+                        ;; https://pqrs.org/osx/karabiner/json.html#to-if-alone
+                        ;; affects to_if_alone behavior
+                        ;; simlayer is implemented with to_if_alone and simultaneous key press feature
+
+                        ;; if keyup event comes within :alone ms from keydown, the key is not just pressed but held
+        :held    500    ;; to_if_held_down_threshold_milliseconds (def: 500)
+                        ;; key is fired twice when :held ms is elapsed (otherwise seen as a hold command) (TODO WHAT IS THIS??)
+    }
+} ;; profiles
+
+ ; the default value is 250
+:simlayer-threshold 250
+
+
+:devices {
+    :apple [
+        {:vendor_id 1452}
+        {:is_built_in_keyboard true}
+    ]
+    :msft [{:vendor_id 1118, :product_id 2092}]  ;; Microsoft Ergonomic Keyboard
+
+    :kybs [  ;; Default for all keyboards.
+        {:vendor_id 1452}
+        {:vendor_id 1118}
+    ]
+} ;; devices
+
+;; ----------------------------------
+;; Hardware Keyboard Mappings
+;; ----------------------------------
+; { :des "Microsoft Ergonomic Keyboard"
+;   :rules [ :msft
+;       [:right_option :right_command]
+; ]}
+
+
+
+;; simlayers are basically "hyper" keys
+;; layers works too, but only recommended for non-typing keys like . or tab
+;; to use more regular typing keys, use simlayers
+ :simlayers {
+    :a-mode {:key :a}      ; navigation    hnei
+    :d-mode {:key :d}      ; delimeters    { } ( _ [ ]
+} ;; simlayers 
+ 
+ ;; main contains multiple manipulators
+ :main [
+    { :des "a-mode (navigation)"
+      :rules [:a-mode
+          [:h :left_arrow]
+          [:j :down_arrow]
+          [:k :up_arrow]
+          [:l :right_arrow ]
+          [:semicolon :return_or_enter ]
+          [:i :delete_or_backspace]
+      ]
+    }
+    { :des "d-mode (delimeters)"
+      :rules [:d-mode
+          [:u :!Sopen_bracket]  ; '{'
+          [:j :!Sclose_bracket] ; '}'
+          [:i :open_bracket]    ; '['
+          [:k :close_bracket]   ; ']'
+          [:o :!S9]             ; left parenthesis '('
+          [:l :!S0]             ; right parenthesis ')'
+          [:h :!Shyphen]        ; '_'
+          [:y :hyphen]          ; '-'
+          [:n :equal_sign]      ; '='
+          [:m :!S1]             ; '!' 
+      ]
+    }
+  ]
+}
