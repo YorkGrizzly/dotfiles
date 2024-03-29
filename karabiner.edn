@@ -1,6 +1,7 @@
 ; -- Examples
 ; https://github.com/kaushikgopal/dotfiles/blob/master/.karabiner.edn
 ; https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md#advance
+; https://gist.github.com/gsinclair/9233f4efc089e6671a271706a2fce0d3
 ;;;; COLEMAK (recognizes the literal key on the keykoard)
 {
  :profiles {
