@@ -94,7 +94,7 @@
           [:y :hyphen]               ; '-'
           [:n :equal_sign]           ; '='
           [:m :!S1]                  ; '!'
-          [:semicolon :!Ssemicolon]  ; ':'
+          [:semicolon :!Sp]          ; ':'
           [:comma :!S4]              ; '$'
       ]
     }
