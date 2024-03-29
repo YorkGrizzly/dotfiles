@@ -66,14 +66,14 @@
 ;; layers works too, but only recommended for non-typing keys like . or tab
 ;; to use more regular typing keys, use simlayers
  :simlayers {
-    :a-mode {:key :a}      ; navigation    hnei
-    :d-mode {:key :d}      ; delimeters    { } ( _ [ ]
+    :f-mode {:key :f}      ; navigation    hnei
+    :s-mode {:key :s}      ; delimeters    { } ( _ [ ]
 } ;; simlayers 
  
  ;; main contains multiple manipulators
  :main [
-    { :des "a-mode (navigation)"
-      :rules [:a-mode
+    { :des "f-mode (navigation)"
+      :rules [:f-mode
           [:h :left_arrow]
           [:j :down_arrow]
           [:k :up_arrow]
@@ -82,18 +82,20 @@
           [:i :delete_or_backspace]
       ]
     }
-    { :des "d-mode (delimeters)"
-      :rules [:d-mode
-          [:u :!Sopen_bracket]  ; '{'
-          [:j :!Sclose_bracket] ; '}'
-          [:i :open_bracket]    ; '['
-          [:k :close_bracket]   ; ']'
-          [:o :!S9]             ; left parenthesis '('
-          [:l :!S0]             ; right parenthesis ')'
-          [:h :!Shyphen]        ; '_'
-          [:y :hyphen]          ; '-'
-          [:n :equal_sign]      ; '='
-          [:m :!S1]             ; '!' 
+    { :des "s-mode (delimeters)"
+      :rules [:s-mode
+          [:u :!S9]                  ; '('
+          [:j :!S0]                  ; ')'
+          [:i :open_bracket]         ; '['
+          [:k :close_bracket]        ; ']'
+          [:o :open_bracket]         ; '{'
+          [:l :close_bracket]        ; '}'
+          [:h :!Shyphen]             ; '_'
+          [:y :hyphen]               ; '-'
+          [:n :equal_sign]           ; '='
+          [:m :!S1]                  ; '!'
+          [:semicolon :!Ssemicolon]  ; ':'
+          [:comma :!S4]              ; '$'
       ]
     }
   ]
