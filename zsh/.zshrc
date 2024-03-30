@@ -148,6 +148,8 @@ alias dv='dirs -v'
 
 ### >> Project Specific (begin)
 export PROJECT_ROOT="~/kosmos"
+# binaries
+alias kmonad=/Users/tshuo/kmonad/.stack-work/install/aarch64-osx/21fdd378bc86b27a240922a93de2f164e0cc23b3545a02a5c83172cb014bbea5/9.4.7/bin/kmonad
 ### << Project Specific (end)
 
 alias ozrc="$EDITOR ~/.zshrc"
