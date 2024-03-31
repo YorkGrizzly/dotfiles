@@ -24,7 +24,7 @@
 
                         ;; after :delay ms, the key press is considered to be delayed
                         ;; (used for double-press macros)
-        :alone   250    ;; to_if_alone_timeout_milliseconds (def: 1000)
+        :alone   500    ;; to_if_alone_timeout_milliseconds (def: 1000)
                         ;; https://pqrs.org/osx/karabiner/json.html#to-if-alone
                         ;; affects to_if_alone behavior
                         ;; simlayer is implemented with to_if_alone and simultaneous key press feature
@@ -32,11 +32,10 @@
                         ;; if keyup event comes within :alone ms from keydown, the key is not just pressed but held
         :held    500    ;; to_if_held_down_threshold_milliseconds (def: 500)
                         ;; key is fired twice when :held ms is elapsed (otherwise seen as a hold command) (TODO WHAT IS THIS??)
+        :simlayer-threshold 250  ;; You have to press the second key within the 250 ms window or else it types normally
     }
 } ;; profiles
 
- ; the default value is 250
-:simlayer-threshold 250
 
 
 :devices {
@@ -66,14 +65,19 @@
 ;; layers works too, but only recommended for non-typing keys like . or tab
 ;; to use more regular typing keys, use simlayers
  :simlayers {
-    :f-mode {:key :f}      ; navigation    hnei
+    :d-mode {:key :d}      ; navigation    hnei
     :s-mode {:key :s}      ; delimeters    { } ( _ [ ]
 } ;; simlayers 
  
  ;; main contains multiple manipulators
  :main [
-    { :des "f-mode (navigation)"
-      :rules [:f-mode
+        { :des "Right Hand Home Row mods"
+         :rules [
+                 ; [:i :left_shift nil {:alone [:i]}]  ;-- ; -> ; (alone) | left_command (hold);
+                 ]
+         }
+    { :des "d-mode (navigation)"
+      :rules [:d-mode
           [:h :left_arrow]
           [:j :down_arrow]
           [:k :up_arrow]
