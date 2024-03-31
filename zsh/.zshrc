@@ -120,7 +120,7 @@ export EDITOR='nvim'
 
 alias grep='grep --color=always'
 
-alias tmux="tmux-2.6 -2" # Force TMUX to recognize 256 colors.
+alias tmux="tmux -2" # Force TMUX to recognize 256 colors.
 alias ta="tmux at"
 alias tl="tmux ls"
 
