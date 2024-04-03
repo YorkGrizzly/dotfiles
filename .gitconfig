@@ -36,4 +36,5 @@
 [mergetool "diffconflicts"]
 	cmd = nvim -c DiffConflicts \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
 	trustExitCode = true
+[mergetool]
 	keepBackup = false
