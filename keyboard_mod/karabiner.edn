@@ -89,8 +89,8 @@
     }
     { :des "s-mode (delimeters)"
       :rules [:s-mode
-          [:y :!S9]                  ; '('
-          [:h :!S0]                  ; ')'
+          [:h :!S9]                  ; '('
+          [:y :!S0]                  ; ')'
           [:k :open_bracket]         ; '['
           [:i :close_bracket]        ; ']'
           [:l :!Sopen_bracket]       ; '{'
