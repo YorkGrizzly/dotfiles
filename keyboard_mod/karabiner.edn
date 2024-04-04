@@ -89,14 +89,14 @@
     }
     { :des "s-mode (delimeters)"
       :rules [:s-mode
-          [:u :!S9]                  ; '('
-          [:j :!S0]                  ; ')'
-          [:i :open_bracket]         ; '['
-          [:k :close_bracket]        ; ']'
-          [:o :!Sopen_bracket]       ; '{'
-          [:l :!Sclose_bracket]      ; '}'
-          [:h :!Shyphen]             ; '_'
-          [:y :hyphen]               ; '-'
+          [:y :!S9]                  ; '('
+          [:h :!S0]                  ; ')'
+          [:k :open_bracket]         ; '['
+          [:i :close_bracket]        ; ']'
+          [:l :!Sopen_bracket]       ; '{'
+          [:o :!Sclose_bracket]      ; '}'
+          [:j :!Shyphen]             ; '_'
+          [:u :hyphen]               ; '-'
           [:n :equal_sign]           ; '='
           [:m :!S1]                  ; '!'
           [:semicolon :!Sp]          ; ':'
