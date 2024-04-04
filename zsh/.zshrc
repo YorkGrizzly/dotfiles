@@ -90,6 +90,9 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
 # Install: git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 # source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh  # MacOS
+
+# TODO: Move this out into a fzf config file.
+export FZF_DEFAULT_COMMAND='rg --files'
 ####################################################### PLUGINS (end) ###########################################################
 
 ####################################################### FUNCTIONS (begin) ###########################################################
