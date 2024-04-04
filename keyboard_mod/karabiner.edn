@@ -74,7 +74,7 @@
  :main [
         { :des "Right Hand Home Row mods"
          :rules [
-                 [:comma :left_shift nil {:alone [:comma]}]  ;-- ; -> ; (alone) | left_command (hold);
+               ;;  [:comma :left_shift nil {:alone [:comma]}]  ;-- ; -> ; (alone) | left_command (hold);
                  ]
          }
     { :des "d-mode (navigation)"
