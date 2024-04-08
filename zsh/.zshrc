@@ -92,7 +92,8 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh  # MacOS
 
 # TODO: Move this out into a fzf config file.
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 ####################################################### PLUGINS (end) ###########################################################
 
 ####################################################### FUNCTIONS (begin) ###########################################################
