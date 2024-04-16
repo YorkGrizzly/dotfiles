@@ -30,7 +30,6 @@
 [push]
         default = simple
 [pull]
-	ff = only
 	rebase = false
 [merge]
 	tool = diffconflicts
