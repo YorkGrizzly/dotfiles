@@ -137,7 +137,6 @@ alias llr='echo "Most recent 10." && ls -tlF | head -n10'
 alias findfile='find . | rg -i'
 
 alias of='fzf -i --bind "enter:become($EDITOR {})"'
-alias od='cd $(find . -type d -print | fzf -i)'
 alias rp='realpath $(find . -type d -o -type f | fzf -i)'  # Fuzzy search file and return realpath.
 
 # Open Vim sessions.
