@@ -152,6 +152,7 @@ export PROJECT_ROOT="~/kosmos"
 
 alias ozrc="$EDITOR ~/.zshrc"
 alias szrc='source ~/.zshrc'
+alias gtmr='cd $(ls --color=no -td -- */ | head -n 1)'
 alias gtdf='cd ~/dotfiles'
 alias gtnv='cd ~/.config/nvim'
 alias gtpr="cd $PROJECT_ROOT"
