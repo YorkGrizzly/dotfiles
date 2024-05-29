@@ -85,11 +85,15 @@ export YSU_IGNORED_ALIASES=("g" "ll")
 
 # Install instructions: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 # source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # MacOs
+if [ -x "$(command -v brew)" ]; then
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # MacOs
+fi
 
 # Install: git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 # source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh  # MacOS
+if [ -x "$(command -v brew)" ]; then
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh  # MacOS
+fi
 
 # TODO: Move this out into a fzf config file.
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden'
