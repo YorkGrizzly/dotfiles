@@ -162,6 +162,9 @@ alias gtnv='cd ~/.config/nvim'
 alias gtpr="cd $PROJECT_ROOT"
 alias oprf='gtpr && fzf -i --bind "enter:become($EDITOR {})"'
 alias oprd='gtpr && cd $(find . -type d -print | fzf -i)'
+
+# Extract all directories under current directory and enter the latest extracted directory.
+alias tart='find . -type f -name "*.tar.gz" -exec tar -xvf {} \; && cd "$(find . -maxdepth 1 -type d | sort -r | head -n 1)"'
 ####################################################### ALIASES (end) ###########################################################
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
