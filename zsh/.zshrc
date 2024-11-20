@@ -162,6 +162,7 @@ alias gtnv='cd ~/.config/nvim'
 alias gtpr="cd $PROJECT_ROOT"
 alias oprf='gtpr && fzf -i --bind "enter:become($EDITOR {})"'
 alias oprd='gtpr && cd $(find . -type d -print | fzf -i)'
+alias gam='function _gam() { git commit -am "$*"; }; _gam'
 
 # Extract all directories under current directory and enter the latest extracted directory.
 alias tart='find . -type f -name "*.tar.gz" -exec tar -xvf {} \; > /dev/null 2>&1 && echo "tar done!"'
