@@ -34,7 +34,7 @@
 [merge]
 	tool = diffconflicts
 [mergetool "diffconflicts"]
-	cmd = nvim -c DiffConflicts \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+	cmd = nvim -n -c "DiffviewOpen" "$MERGE"
 	trustExitCode = true
 [mergetool]
 	keepBackup = false
